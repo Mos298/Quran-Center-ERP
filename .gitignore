@@ -1,4 +1,13 @@
+# Visual Studio & Build Outputs
 .vs/
 bin/
 obj/
+publish/
+packages/
+
+# User & Security Files
 *.user
+*.pfx
+*.suo
+*.userosscache
+*.sln.docstates
