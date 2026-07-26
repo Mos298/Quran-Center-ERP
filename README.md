@@ -55,3 +55,37 @@ Ensure you have the following installed on your machine before running the proje
 1. Clone this repository:
    ```bash
    git clone https://github.com/Mos298/Quran-Center-ERP.git
+   ```
+2. Open the solution file in **Visual Studio 2022**.
+3. Locate `App.config` in the `QuranCenter.App` project.
+4. Update the SQL Server connection string to point to your local instance:
+   ```xml
+   <connectionStrings>
+     <add name="DefaultConnection" 
+          connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=QuranCenterDB;Integrated Security=True;" 
+          providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   ```
+### 3. Build & Run
+1. Press `Ctrl + Shift + B` to build the solution.
+2. Press `F5` to start debugging and run the application.
+
+---
+
+## 📂 Repository Structure
+
+```text
+Quran-Center-ERP/
+├── Database/
+│   └── QuranCenterDB.bak     # Database backup file
+├── QuranCenter.App/
+│   ├── Services/             # Business logic & background services
+│   ├── App.config            # System configurations & connection strings
+│   └── [Modules]/            # Role-specific WinForms interfaces
+└── .gitignore                # Version control exclusions
+```
+---
+
+## 📝 License
+
+This project is developed for educational and institutional administrative purposes.
