@@ -1,0 +1,1164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9244CF0-E198-4B90-B482-7764CD3A1D08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>النظام_النهائي</RootNamespace>
+    <AssemblyName>النظام_النهائي</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1734929D65A9C25AF7E2E3A8FBFED464B53E0CC1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>النظام_النهائي_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>packages\AWSSDK.Core.3.7.100.14\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SecurityToken, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>packages\AWSSDK.SecurityToken.3.7.100.14\lib\net45\AWSSDK.SecurityToken.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.47.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Core.1.47.1\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.14.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Identity.1.14.2\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Cryptography.8.0.0\lib\net462\Microsoft.Bcl.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.SqlClient.6.1.1\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Memory.8.0.1\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.3\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.8.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.73.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.73.1\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.73.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.Extensions.Msal.4.73.1\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.7.7.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.7.7.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.7.7.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.7.7.1\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.7.7.1\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.7.7.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.30.0.0, Culture=neutral, PublicKeyToken=94992a530f44e321, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Bson.2.30.0\lib\net472\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.30.0.0, Culture=neutral, PublicKeyToken=94992a530f44e321, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.Core.2.30.0\lib\net472\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.12.0.0, Culture=neutral, PublicKeyToken=94992a530f44e321, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Libmongocrypt.1.12.0\lib\net472\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Snappier, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a1b25124e6e13a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Snappier.1.0.0\lib\netstandard2.0\Snappier.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.5.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\System.ClientModel.1.5.1\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.7.7.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.Data.8.0.1\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=8.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Pkcs.8.0.1\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.ProtectedData.4.7.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZstdSharp, Version=0.7.3.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.3\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A_Data_entry_A\center_A\cetterAcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\cetterAcs.Designer.cs">
+      <DependentUpon>cetterAcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\Competition.cs" />
+    <Compile Include="A_Data_entry_A\Competitions_A\frmAddCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmAddCompetition.Designer.cs">
+      <DependentUpon>frmAddCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmAssignStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmAssignStudents.Designer.cs">
+      <DependentUpon>frmAssignStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionResults.Designer.cs">
+      <DependentUpon>frmCompetitionResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionsDashboard_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionsDashboard_A.Designer.cs">
+      <DependentUpon>frmCompetitionsDashboard_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmCompetitionsMain.Designer.cs">
+      <DependentUpon>frmCompetitionsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmEditCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmEditCompetition.Designer.cs">
+      <DependentUpon>frmEditCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmEndCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmEndCompetition.Designer.cs">
+      <DependentUpon>frmEndCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmTeacherDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\frmTeacherDetails.Designer.cs">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucActiveCompetitions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucActiveCompetitions.Designer.cs">
+      <DependentUpon>ucActiveCompetitions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucCandidates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucCandidates.Designer.cs">
+      <DependentUpon>ucCandidates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucCompetitionsLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucCompetitionsLog.Designer.cs">
+      <DependentUpon>ucCompetitionsLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucManageCompetitions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Competitions_A\ucManageCompetitions.Designer.cs">
+      <DependentUpon>ucManageCompetitions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmAddDataEntry_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmAddDataEntry_A.Designer.cs">
+      <DependentUpon>frmAddDataEntry_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmEditDataEntry_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmEditDataEntry_A.Designer.cs">
+      <DependentUpon>frmEditDataEntry_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmPrintDataEntry_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\frmPrintDataEntry_A.Designer.cs">
+      <DependentUpon>frmPrintDataEntry_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\SecurityHelper.cs" />
+    <Compile Include="A_Data_entry_A\Notficatcion_A\RequestItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Notficatcion_A\RequestItemControl.Designer.cs">
+      <DependentUpon>RequestItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Notficatcion_A\RequestModels.cs" />
+    <Compile Include="A_Data_entry_A\Notficatcion_A\ucNotifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Notficatcion_A\ucNotifications.Designer.cs">
+      <DependentUpon>ucNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Session.cs" />
+    <Compile Include="A_Data_entry_A\Statistics_A\regster_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Statistics_A\regster_A.Designer.cs">
+      <DependentUpon>regster_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\frmEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\frmEditStudent.Designer.cs">
+      <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\frmStudentAffairsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\frmStudentAffairsMain.Designer.cs">
+      <DependentUpon>frmStudentAffairsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\Student.cs" />
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucInactiveStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucInactiveStudents.Designer.cs">
+      <DependentUpon>ucInactiveStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucRegistrationRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucRegistrationRequests.Designer.cs">
+      <DependentUpon>ucRegistrationRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucViewStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Student_Affairs_A\ucViewStudents.Designer.cs">
+      <DependentUpon>ucViewStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Home_page_B\home_B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Home_page_B\home_B.Designer.cs">
+      <DependentUpon>home_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\centerl_user_B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\centerl_user_B.Designer.cs">
+      <DependentUpon>centerl_user_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\center.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Home_page_A\center.Designer.cs">
+      <DependentUpon>center.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\print.Designer.cs">
+      <DependentUpon>print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\TeacherAssignment.cs" />
+    <Compile Include="B_Supervisors_B\Subordinate_B\TeacherVisit.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="C_monetor_C\Home_page_C\home_c.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Home_page_C\home_c.Designer.cs">
+      <DependentUpon>home_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\frmEditTeacherEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\frmEditTeacherEvaluation.Designer.cs">
+      <DependentUpon>frmEditTeacherEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\frmTeacherEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\frmTeacherEvaluation.Designer.cs">
+      <DependentUpon>frmTeacherEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\print_c1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\print_c1.Designer.cs">
+      <DependentUpon>print_c1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\TeacherEvaluation.cs" />
+    <Compile Include="C_monetor_C\tracking_C\frmTeacherAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\tracking_C\frmTeacherAttendance.Designer.cs">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\tracking_C\print_c.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\tracking_C\print_c.Designer.cs">
+      <DependentUpon>print_c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\NominationCompetition.cs" />
+    <Compile Include="D_the_techer_D\Competitions_D\ucNominateStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\ucNominateStudents.Designer.cs">
+      <DependentUpon>ucNominateStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\ucTeacherNomination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\ucTeacherNomination.Designer.cs">
+      <DependentUpon>ucTeacherNomination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\ucViewNominations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Competitions_D\ucViewNominations.Designer.cs">
+      <DependentUpon>ucViewNominations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Home_page_D\editformtecher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Home_page_D\editformtecher.Designer.cs">
+      <DependentUpon>editformtecher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Home_page_D\the_home .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Home_page_D\the_home .Designer.cs">
+      <DependentUpon>the_home .cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmEditEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmEditEvaluation.Designer.cs">
+      <DependentUpon>frmEditEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmPrintEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmPrintEvaluation.Designer.cs">
+      <DependentUpon>frmPrintEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmStudentEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\frmStudentEvaluation.Designer.cs">
+      <DependentUpon>frmStudentEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\StudentEvaluation.cs" />
+    <Compile Include="D_the_techer_D\new_student_D\print_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\new_student_D\print_Form.Designer.cs">
+      <DependentUpon>print_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\new_student_D\ucPendingRegistrations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\new_student_D\ucPendingRegistrations.Designer.cs">
+      <DependentUpon>ucPendingRegistrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmAddStudent.Designer.cs">
+      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmAssignExistingStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmAssignExistingStudent.Designer.cs">
+      <DependentUpon>frmAssignExistingStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmEditStudent_s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmEditStudent_s.Designer.cs">
+      <DependentUpon>frmEditStudent_s.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmPrintStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmPrintStudents.Designer.cs">
+      <DependentUpon>frmPrintStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmRemoveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmRemoveStudent.Designer.cs">
+      <DependentUpon>frmRemoveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmRequestStudentTransfes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\frmRequestStudentTransfes.Designer.cs">
+      <DependentUpon>frmRequestStudentTransfes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\NominationCompetition.cs" />
+    <Compile Include="D_the_techer_D\tracking_D\AttendanceRecord.cs" />
+    <Compile Include="D_the_techer_D\tracking_D\ucStudentAttendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\tracking_D\ucStudentAttendance.Designer.cs">
+      <DependentUpon>ucStudentAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDataForm.Designer.cs">
+      <DependentUpon>EditDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_Student_E\edit_student_D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_Student_E\edit_student_D.Designer.cs">
+      <DependentUpon>edit_student_D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\eductional_level_C .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Level_lerning_D\eductional_level_C .Designer.cs">
+      <DependentUpon>eductional_level_C .cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Form_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Form_C.Designer.cs">
+      <DependentUpon>Form_C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Form_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Form_A.Designer.cs">
+      <DependentUpon>Form_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\Form_D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\Form_D.Designer.cs">
+      <DependentUpon>Form_D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_Student_E\Form_E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_Student_E\Form_E.Designer.cs">
+      <DependentUpon>Form_E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Form_B.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Form_B.Designer.cs">
+      <DependentUpon>Form_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmAddCenter_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmAddCenter_A.Designer.cs">
+      <DependentUpon>frmAddCenter_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmAddMentor_A3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmAddMentor_A3.Designer.cs">
+      <DependentUpon>frmAddMentor_A3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmAddSupervisor_A2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmAddSupervisor_A2.Designer.cs">
+      <DependentUpon>frmAddSupervisor_A2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\frmAddTeacherVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B_Supervisors_B\Subordinate_B\frmAddTeacherVisit.Designer.cs">
+      <DependentUpon>frmAddTeacherVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmAddTeacher_A4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmAddTeacher_A4.Designer.cs">
+      <DependentUpon>frmAddTeacher_A4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\frmChangePassword_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\frmChangePassword_A.Designer.cs">
+      <DependentUpon>frmChangePassword_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmDeleteCenter_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmDeleteCenter_A.Designer.cs">
+      <DependentUpon>frmDeleteCenter_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmDeleteMentor_A3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmDeleteMentor_A3.Designer.cs">
+      <DependentUpon>frmDeleteMentor_A3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmDeleteSupervisor_A2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmDeleteSupervisor_A2.Designer.cs">
+      <DependentUpon>frmDeleteSupervisor_A2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmDeleteTeacher_A4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmDeleteTeacher_A4.Designer.cs">
+      <DependentUpon>frmDeleteTeacher_A4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmEditCenter_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmEditCenter_A.Designer.cs">
+      <DependentUpon>frmEditCenter_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmEditMentor_A3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmEditMentor_A3.Designer.cs">
+      <DependentUpon>frmEditMentor_A3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmEditSupervisor_A2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmEditSupervisor_A2.Designer.cs">
+      <DependentUpon>frmEditSupervisor_A2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmEditTeacher_A4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmEditTeacher_A4.Designer.cs">
+      <DependentUpon>frmEditTeacher_A4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\frmForgotPasswordcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\frmForgotPasswordcs.Designer.cs">
+      <DependentUpon>frmForgotPasswordcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmPrintCenters_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\center_A\frmPrintCenters_A.Designer.cs">
+      <DependentUpon>frmPrintCenters_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmPrintMentors_A3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\frmPrintMentors_A3.Designer.cs">
+      <DependentUpon>frmPrintMentors_A3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmPrintSupervisors_A2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\frmPrintSupervisors_A2.Designer.cs">
+      <DependentUpon>frmPrintSupervisors_A2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmPrintTeachers_A4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\frmPrintTeachers_A4.Designer.cs">
+      <DependentUpon>frmPrintTeachers_A4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\level_B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\Level_lerning_C\level_B.Designer.cs">
+      <DependentUpon>level_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_Student_E\Home_page_E\home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="E_Student_E\Home_page_E\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_Student_E\Login_E\login_E.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_Student_E\Login_E\login_E.Designer.cs">
+      <DependentUpon>login_E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\memorizers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\The_teacher_A\memorizers.Designer.cs">
+      <DependentUpon>memorizers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\Mentors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Mentors_A4\Mentors.Designer.cs">
+      <DependentUpon>Mentors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_Student_E\tracking_Level_D\ucStudentEvaluationCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="E_Student_E\tracking_Level_D\ucStudentEvaluationCard.Designer.cs">
+      <DependentUpon>ucStudentEvaluationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ONE_FROM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ONE_FROM.Designer.cs">
+      <DependentUpon>ONE_FROM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvalPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\loginA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Login_A\loginA.Designer.cs">
+      <DependentUpon>loginA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quranDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quranDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Statistics_A\Statistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Statistics_A\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\student_C.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="D_the_techer_D\student_D\student_C.Designer.cs">
+      <DependentUpon>student_C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\Supervisors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Data_entry_A\Supervisors_A\Supervisors.Designer.cs">
+      <DependentUpon>Supervisors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_monetor_C\tracking_C\tracking_B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="C_monetor_C\tracking_C\tracking_B.Designer.cs">
+      <DependentUpon>tracking_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\CenterService.cs" />
+    <Compile Include="Services\CompetitionService.cs" />
+    <Compile Include="Services\NominationService.cs" />
+    <Compile Include="Services\RegistrationService.cs" />
+    <Compile Include="Services\StatisticsService.cs" />
+    <Compile Include="Services\TeacherVisitService.cs" />
+    <EmbeddedResource Include="A_Data_entry_A\center_A\cetterAcs.resx">
+      <DependentUpon>cetterAcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmAddCompetition.resx">
+      <DependentUpon>frmAddCompetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmCompetitionResults.resx">
+      <DependentUpon>frmCompetitionResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmCompetitionsDashboard_A.resx">
+      <DependentUpon>frmCompetitionsDashboard_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmCompetitionsMain.resx">
+      <DependentUpon>frmCompetitionsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmEditCompetition.aa.resx">
+      <DependentUpon>frmEditCompetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmEditCompetition.resx">
+      <DependentUpon>frmEditCompetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\frmTeacherDetails.resx">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\ucActiveCompetitions.resx">
+      <DependentUpon>ucActiveCompetitions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\ucCandidates.resx">
+      <DependentUpon>ucCandidates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Competitions_A\ucManageCompetitions.resx">
+      <DependentUpon>ucManageCompetitions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Home_page_A\center.resx">
+      <DependentUpon>center.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Home_page_A\frmAddDataEntry_A.resx">
+      <DependentUpon>frmAddDataEntry_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Home_page_A\frmEditDataEntry_A.resx">
+      <DependentUpon>frmEditDataEntry_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Mentors_A4\frmAddMentor_A3.resx">
+      <DependentUpon>frmAddMentor_A3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Mentors_A4\frmEditMentor_A3.resx">
+      <DependentUpon>frmEditMentor_A3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Notficatcion_A\RequestItemControl.resx">
+      <DependentUpon>RequestItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Statistics_A\regster_A.resx">
+      <DependentUpon>regster_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Student_Affairs_A\frmEditStudent.resx">
+      <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Student_Affairs_A\frmStudentAffairsMain.resx">
+      <DependentUpon>frmStudentAffairsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Student_Affairs_A\ucInactiveStudents.resx">
+      <DependentUpon>ucInactiveStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Student_Affairs_A\ucRegistrationRequests.resx">
+      <DependentUpon>ucRegistrationRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Student_Affairs_A\ucViewStudents.resx">
+      <DependentUpon>ucViewStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Supervisors_A\frmAddSupervisor_A2.resx">
+      <DependentUpon>frmAddSupervisor_A2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Supervisors_A\frmEditSupervisor_A2.resx">
+      <DependentUpon>frmEditSupervisor_A2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Supervisors_A\frmPrintSupervisors_A2.resx">
+      <DependentUpon>frmPrintSupervisors_A2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\The_teacher_A\frmAddTeacher_A4.resx">
+      <DependentUpon>frmAddTeacher_A4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\The_teacher_A\frmDeleteTeacher_A4.resx">
+      <DependentUpon>frmDeleteTeacher_A4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\The_teacher_A\frmEditTeacher_A4.resx">
+      <DependentUpon>frmEditTeacher_A4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_Supervisors_B\Home_page_B\home_B.resx">
+      <DependentUpon>home_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_Supervisors_B\Subordinate_B\centerl_user_B.resx">
+      <DependentUpon>centerl_user_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_Supervisors_B\Subordinate_B\frmAddTeacherVisit.resx">
+      <DependentUpon>frmAddTeacherVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_Supervisors_B\Subordinate_B\print.resx">
+      <DependentUpon>print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\Home_page_C\home_c.resx">
+      <DependentUpon>home_c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\Level_lerning_C\frmEditTeacherEvaluation.resx">
+      <DependentUpon>frmEditTeacherEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\Level_lerning_C\frmTeacherEvaluation.resx">
+      <DependentUpon>frmTeacherEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\tracking_C\frmTeacherAttendance.resx">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Competitions_D\ucNominateStudents.resx">
+      <DependentUpon>ucNominateStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Competitions_D\ucTeacherNomination.resx">
+      <DependentUpon>ucTeacherNomination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Competitions_D\ucViewNominations.resx">
+      <DependentUpon>ucViewNominations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Home_page_D\editformtecher.resx">
+      <DependentUpon>editformtecher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Home_page_D\the_home .resx">
+      <DependentUpon>the_home .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Level_lerning_D\frmStudentEvaluation.resx">
+      <DependentUpon>frmStudentEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\new_student_D\print_Form.resx">
+      <DependentUpon>print_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\new_student_D\ucPendingRegistrations.resx">
+      <DependentUpon>ucPendingRegistrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\student_D\frmEditStudent_s.resx">
+      <DependentUpon>frmEditStudent_s.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDataForm.resx">
+      <DependentUpon>EditDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_Student_E\edit_student_D.resx">
+      <DependentUpon>edit_student_D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Level_lerning_D\eductional_level_C .resx">
+      <DependentUpon>eductional_level_C .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_Student_E\Home_page_E\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_Student_E\tracking_Level_D\ucStudentEvaluationCard.resx">
+      <DependentUpon>ucStudentEvaluationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\Form_C.resx">
+      <DependentUpon>Form_C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Form_A.resx">
+      <DependentUpon>Form_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\Form_D.resx">
+      <DependentUpon>Form_D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_Student_E\Form_E.resx">
+      <DependentUpon>Form_E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_Supervisors_B\Form_B.resx">
+      <DependentUpon>Form_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\center_A\frmAddCenter_A.resx">
+      <DependentUpon>frmAddCenter_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\center_A\frmDeleteCenter_A.resx">
+      <DependentUpon>frmDeleteCenter_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Mentors_A4\frmDeleteMentor_A3.resx">
+      <DependentUpon>frmDeleteMentor_A3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Supervisors_A\frmDeleteSupervisor_A2.resx">
+      <DependentUpon>frmDeleteSupervisor_A2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\center_A\frmEditCenter_A.resx">
+      <DependentUpon>frmEditCenter_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Login_A\frmForgotPasswordcs.resx">
+      <DependentUpon>frmForgotPasswordcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\center_A\frmPrintCenters_A.resx">
+      <DependentUpon>frmPrintCenters_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Mentors_A4\frmPrintMentors_A3.resx">
+      <DependentUpon>frmPrintMentors_A3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\The_teacher_A\frmPrintTeachers_A4.resx">
+      <DependentUpon>frmPrintTeachers_A4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\Level_lerning_C\level_B.resx">
+      <DependentUpon>level_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Login_A\loginA.resx">
+      <DependentUpon>loginA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_Student_E\Login_E\login_E.resx">
+      <DependentUpon>login_E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\The_teacher_A\memorizers.resx">
+      <DependentUpon>memorizers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Mentors_A4\Mentors.resx">
+      <DependentUpon>Mentors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ONE_FROM.resx">
+      <DependentUpon>ONE_FROM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="A_Data_entry_A\Statistics_A\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D_the_techer_D\student_D\student_C.resx">
+      <DependentUpon>student_C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Data_entry_A\Supervisors_A\Supervisors.resx">
+      <DependentUpon>Supervisors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_monetor_C\tracking_C\tracking_B.resx">
+      <DependentUpon>tracking_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="libmongocrypt.dylib" />
+    <None Include="libmongocrypt.so" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="quranDataSet1.xsc">
+      <DependentUpon>quranDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="quranDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quranDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quranDataSet1.xss">
+      <DependentUpon>quranDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="النظام_النهائي_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="C_monetor_C\Login_C\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mongocrypt.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets'))" />
+  </Target>
+  <Import Project="packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('packages\MongoDB.Libmongocrypt.1.12.0\build\MongoDB.Libmongocrypt.targets')" />
+</Project>
